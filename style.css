@@ -1,0 +1,243 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+   }
+
+.screen {
+    height: 100vh;
+    background-color: #999;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.screen h2 {
+    margin: 0;
+    background-color: rgba(0,0,0,.2);
+    padding: 20px;
+    font-size: 40px;
+}
+.blue {
+    background-color: #9eb8d6;
+    background-image: url(img/1.jpg);
+}
+.blue h2{
+    margin-top: 25px;
+    margin-bottom: 100px;
+}
+.green {
+    background-image: linear-gradient(#e66465, #9198e5);
+}
+.green >h2{
+    transform-origin: bottom;
+    transform: perspective(1000px) rotateX(180deg);
+}
+.green>h2.show{
+    perspective: (1000px);
+    transform:perspective(1000px) rotateX(0deg);
+}
+
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 45px;
+}
+.container_item{
+    margin-top: 35px;
+}
+.red {
+    background-image: linear-gradient(#9198e5, #f598a8);
+ 
+}
+.red h2{
+    margin-bottom: 160px;
+    transform-origin: bottom;
+    transform: perspective(1000px) rotateX(180deg);
+}
+.red h2.show{
+    perspective: (1000px);
+    transform:perspective(1000px) rotateX(0deg);
+}
+
+.cards {
+    width: calc (100%-45px);
+    padding: 50px;
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+.cards__item{
+    flex-basis: 25%;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #9198e5;
+    padding: 20px;
+    
+}
+.cards__item p{
+    text-align: start;
+    
+}
+.cards__item img{
+    height: 175px;
+    transform-origin: center;
+}
+.purple {
+    background: linear-gradient(#f598a8, #f6edb2);
+}
+
+
+.animation {
+    transition: 500ms ease;
+    opacity: 0;
+}
+.animation.show {
+    opacity: 1;
+}
+.ani-slide-right {
+    transform: translateX(-250px);
+}
+.ani-slide-right.show {
+    transform: translateX(0);
+}
+.ani-slide-left {
+    transform: translateX(250px);
+}
+.ani-slide-left.show {
+    transform: translateX(0);
+}
+.ani-slide-down {
+    transform: translateY(-250px);
+}
+.ani-slide-down.show {
+    transform: translateY(0);
+}
+.ani-slide-up {
+    transform: translateY(250px);
+}
+.ani-slide-up.show {
+    transform: translateY(0);
+}
+.time_max{
+    transition: 1000ms ease;
+}
+.cards__item.show{
+    transform: rotate(360deg);
+    
+}
+.time_min{
+    transition: 300ms  ease;
+    
+}
+.time_maxmax{
+    transition: 1500ms  ease;
+    
+}
+
+
+.purple h2{
+    margin-bottom: 150px;
+    transform-origin: bottom;
+    transform: perspective(1000px) rotateX(180deg);
+}
+
+.purple h2.show{
+perspective: (1000px);
+transform:perspective(1000px) rotateX(0deg);
+}
+
+
+.spinner{
+    max-width: 150px;
+    position: relative;
+    top:-240px;
+    left:-250px;
+    transform-origin: center;
+}
+.spinner.show{
+      transform: rotateZ(1060deg);
+    }
+
+
+.grow{
+    padding: 40px;
+    background: linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%);;
+    max-width: 220px;
+    border-radius: 10px;
+    
+}
+.grow:hover{
+    max-width:100%;
+    background-color: #da865691;
+}
+
+
+.screen_grow{
+
+    /* margin: 0 350px 50px; */
+    /* min-width: 600px; */
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 120px;
+
+   
+    
+}
+
+.grow.ani_down{
+    transform: translateY(101px);
+  
+}
+.grow.ani_down.show{
+    transform: translateY(0px);
+  
+}
+
+.grow.ani_up{
+    
+    transform: translateY(-101px);
+  
+}
+.grow.ani_up.show{
+    transform: translateY(0px);
+  
+}
+
+
+.container_img img{
+    transform: translateX(-350px);
+}
+.container_img img.show{
+    
+    transform: translateX(0);
+
+}
+
+
+.info{
+    padding: 20px;
+    border-radius: 20px;
+    margin: 50px 0 50px;
+    background-color: rgba(88, 57, 88, 0.753);
+    transform: translateX(0);
+    font-weight: 700;
+    font-size: 25px;
+}
+.info.show{
+    transform: translateX(-350px);
+}
+.info.order.show{
+    transition-delay: 500ms;
+    transform: translateX(350px);
+}
+.info.ordernext.show{
+    transition-delay: 1000ms;
+    transform: translateX(-350px);
+}
